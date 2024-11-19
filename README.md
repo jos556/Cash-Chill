@@ -96,7 +96,7 @@ def show\_warning\_dialog() # 顯示警告對話框
 
 ### 📊 資料結構設計
 
-#### 交易記錄結構
+#### 交易記錄��構
 
 python
 
@@ -159,3 +159,22 @@ scheduled\_event = {
 - **測試團隊** - [LIN, LI–SHIN & CHEN, MENG-YUN & HSIEH, CHING HUAI &  CHEN,SHIH-TING]
 
 <p align="center">Made with ❤️ in NTU</p>
+
+## 🐳 Docker 部署
+
+### 使用 Docker 運行
+
+1. 確保已安裝 Docker 和 Docker Compose
+2. 克隆專案後，在專案根目錄執行：
+
+#### 構建映像
+
+docker-compose build
+
+#### 運行容器
+
+docker-compose up
+
+#### 停止容器
+
+docker-compose down

@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  cash-and-chill:
+    build: .
+    container_name: cash-and-chill
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./data:/app/data
+    environment:
+      - DISPLAY=${DISPLAY}
+    network_mode: host 
