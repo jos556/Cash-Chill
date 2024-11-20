@@ -1,3 +1,4 @@
+# 引入需要之套件 tkinter , matplotlib , pandas , datetime , tkcalendar
 import tkinter as tk
 from tkinter import ttk, messagebox
 import matplotlib.pyplot as plt
@@ -5,12 +6,14 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import pandas as pd
 from datetime import datetime, date, timedelta
 from matplotlib.patches import FancyBboxPatch  
-from tkcalendar import DateEntry  # 需安裝 pip install tkcalendar
+from tkcalendar import DateEntry  # 需安裝 pip install tkcalendar (cammand)
 
-plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei']  # 微軟正黑體
+plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei']  # 字體為微軟正黑體
 plt.rcParams['axes.unicode_minus'] = False  # 解決負號顯示問題
 
+# 主要財務管理class
 class FinanceManager:
+    # 初始化應用程式和設置基本參數
     def __init__(self, root):
         self.root = root
         self.root.title("Cash & Chill - 財務管理系統")
@@ -54,6 +57,7 @@ class FinanceManager:
         self.check_scheduled_events()
         root.after(3600000, self.check_scheduled_events)  # 每小時檢查一次
         
+    # 創建圖形使用者介面
     def create_gui(self):
         # 設置整體風格
         style = ttk.Style()
@@ -308,6 +312,7 @@ class FinanceManager:
         # 放置表格
         self.transaction_tree.pack(side='left', fill='both', expand=True)
         
+    # 顯示事件新增對話框
     def show_event_dialog(self):
         # 創建新視窗並設置更大的尺寸
         dialog = tk.Toplevel(self.root)
@@ -481,7 +486,7 @@ class FinanceManager:
         # 更新統計和圖表
         self.update_monthly_stats()
         self.update_chart()
-
+    # 檢查定期事件
     def check_scheduled_events(self):
         if not hasattr(self, 'scheduled_events'):
             return
@@ -507,6 +512,7 @@ class FinanceManager:
                     # 處理無效日期（如2月30日）
                     continue
 
+    # 顯示警告對話框
     def update_monthly_stats(self):
         # 獲取當前日期和時間
         current_datetime = datetime.now()
