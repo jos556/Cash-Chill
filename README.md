@@ -1,7 +1,7 @@
 # 💰 Cash & Chill 財務管理系統
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jos556/Cash-Chill/refs/heads/main/screenshots/main_interface.png" alt="主介面預覽" width="800"/>
+  <img src="https://raw.githubusercontent.com/jos556/Cash-Chill/refs/heads/main/screenshots/3.png" alt="主介面預覽" width="800"/>
 </p>
 
 這是一個使用 Python 和 Tkinter 開發的財務管理系統，幫助用戶追蹤和管理個人財務。透過直觀的介面和強大的功能，讓您輕鬆掌握財務狀況！
@@ -58,7 +58,7 @@
 - 精美視覺特效
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/jos556/Cash-Chill/refs/heads/main/screenshots/expense_analysis.png" alt="支出分析圖表" width="600"/>
+  <img src="https://raw.githubusercontent.com/jos556/Cash-Chill/refs/heads/main/screenshots/10.png" alt="支出分析圖表" width="600"/>
 </p>
 
 ## 🛠️ 技術實現
